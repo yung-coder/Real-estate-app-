@@ -5,7 +5,7 @@ import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import millify from "millify";
 
-import { baseUrl, fetchapi } from "../../help/fetchApi";
+import { baseUrl, fetchApi } from "../../help/fetchApi";
 import ImageScrollbar from "../../components/ImageScrollbar";
 
 const PropertyDetails = ({
@@ -127,7 +127,7 @@ const PropertyDetails = ({
 export default PropertyDetails;
 
 export async function getServerSideProps({ params: { id } }) {
-  const data = await fetchapi(`${baseUrl}/properties/detail?externalID=${id}`);
+  const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
 
   return {
     props: {
