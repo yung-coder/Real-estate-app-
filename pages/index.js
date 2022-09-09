@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Banner from '../components/Banner';
 import { Box , Flex } from '@chakra-ui/react';
 
-import {baseUrl , fetchapi} from '../utils/fetchapi';
+import {baseUrl , fetchApi} from '../utils/fetchapi';
 import Property from '../components/Property';
 
 
@@ -42,8 +42,8 @@ export default function Home({proppertiesForsSale , proppertiesForsrent }) {
 
 
 export async  function getStaticProps(){
-  const proppertyForsSale = await fetchapi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`)
-  const proppertyForsrent = await fetchapi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
+  const proppertyForsSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`)
+  const proppertyForsrent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
 
   return{
     props:{
