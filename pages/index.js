@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Banner from '../components/Banner';
 import { Box , Flex } from '@chakra-ui/react';
 
-import {baseUrl , fetchApi} from '../utils/fetchapi';
+import {baseUrl , fetchApi} from '../help/fetchApi';
 import Property from '../components/Property';
 
 
